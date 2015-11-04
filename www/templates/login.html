@@ -1,0 +1,21 @@
+<ion-view view-title="Login">
+    <ion-nav-bar class="font bar-balanced">
+        <ion-nav-back-button class="font font">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="font padding">
+        <form name="loginForm" novalidate ng-submit="loginSubmitForm(loginForm)">
+        <div class="font list list-inset">
+                <label ng-class="font { 'has-errors' : loginForm.username.$invalid && loginForm.$submitted}" class="font item item-input">
+                    <input ng-model="user.username" name="username" type="text" placeholder="username" required>
+                </label>
+                <label ng-class="font { 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}" class="font item item-input">
+                    <input ng-model="user.password" name="password" type="password" placeholder="Password" required>
+                </label>
+            </div>
+        <button type="submit" class="font button button-block button-calm">
+            Login
+        </button>
+        </form>
+    </ion-content>
+</ion-view>
