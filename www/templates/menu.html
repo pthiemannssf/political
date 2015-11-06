@@ -1,21 +1,18 @@
 <ion-view view-title="Menu">
-    <ion-content class="padding">
-        <button class="font button button-block button-calm">
+    <ion-nav-buttons side="left">
+        <button class="font button" nav-direction="exit" ng-click = "logout()">
+            Logout
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+    </ion-nav-buttons>
+    <ion-content class="padding light-bg">
+        <button class="font button button-block button-calm" ui-sref="graphs">
             Graphs
         </button>
         <button class="font button button-block button-calm" ui-sref="chooseParty">
             Change Vote
         </button>
-        <div class="row bottom">
-            <div class="col">
-                <button class="font button button-block button-calm">
-                    Yes
-                </button>
-            </div>
-            <div class="col">
-                <button class="font button button-block button-calm">
-                    No
-                </button>
             </div>
         </div>
     </ion-content>

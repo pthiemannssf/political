@@ -1,0 +1,13 @@
+<ion-view view-title="Graphs">
+    <ion-nav-buttons side="left">
+        <button class="font button" ui-sref="lobby">
+        Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding text-center"> 
+        <h1 class="font">Party Votes</h1>
+        <canvas id="bar" class="font chart chart-bar" data="data" labels="labels" options="options" height="302" colours="colours" width="647"></canvas>   
+        <h1 class="font">Candidate Votes</h1>
+        <canvas id="bar2" class="font chart chart-bar" data="canData" labels="canLabels" options="canOptions" height="302" colours="colours" width="647"></canvas>   
+        </ion-content>
+</ion-view>

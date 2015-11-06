@@ -1,15 +1,12 @@
 <ion-view view-title="Choose Your Party">
     <ion-content>
-        <div class="list">
+        <div class="list" ng-controller="PartyCtrl">
 
-        <label class="item item-radio">
-            <input type="radio" name="group">
-                <div class="item-content">
-                      Go
-                </div>
-            <i class="radio-icon ion-checkmark"></i>
-        </label>
-        <button class="font button button-block button-calm" ui-sref="chooseCandidate">
+            <ion-radio ng-repeat="party in parties" ng-model="user.value" value="{{party.Name}}" ng-change="partyChange(party)">
+                {{ party.Name }} 
+            </ion-radio>
+        </div>
+        <button class="font button button-block button-calm" ng-click="updateVotes()" ui-sref="chooseCandidate">
             Next
         </button>
     </ion-content>

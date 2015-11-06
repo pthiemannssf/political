@@ -1,4 +1,12 @@
 {
   "name": "political",
-  "app_id": ""
+  "app_id": "0a4370e9",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

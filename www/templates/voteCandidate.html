@@ -1,6 +1,12 @@
 <ion-view view-title="Choose Your Party">
     <ion-content>
-        <button class="font button button-block button-calm" ui-sref="lobby">
+        <div class="list">
+
+            <ion-radio ng-repeat="candidate in candidates" ng-model="user.value" value="{{candidate.Name}}" ng-change="candidateChange(candidate)">
+                {{ candidate.Name }} 
+            </ion-radio>
+        </div>
+        <button class="font button button-block button-calm" ng-click="updateVotes()" ui-sref="lobby">
             Next
         </button>
     </ion-content>
